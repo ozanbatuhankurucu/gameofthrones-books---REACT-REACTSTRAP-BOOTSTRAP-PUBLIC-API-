@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&family=Old+Standard+TT&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
+  font-family: 'Old Standard TT', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-header{
+  background-image: url('https://images.unsplash.com/photo-1504688286307-ebadb37bef9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:50% 50%;
+  background-attachment: fixed;
+  position: relative;
+}
+.main-header h1{
+  font-family: 'Grenze Gotisch', cursive;
+  font-weight:bold;
+  color: #313E15;
+  -ms-transform: rotate(25deg); /* IE 9 */
+  transform: rotate(25deg);
+}
+.primary-b-pos{
+  position: absolute;
+  right: -5px;
+  bottom: 40%;
+}
+#primary-btn{
+  padding-right: 35px;
+}
+
+#primary-btn:hover { 
+  animation: effect 0.4s infinite; 
+} 
+.book-card:hover{
+  animation: effect 0.4s infinite; 
+}
+
+
+@keyframes effect { 
+  0% { 
+      transform: translateX(0px) rotate(0deg); 
+  } 
+
+  20% { 
+      transform: translateX(-4px) rotate(-4deg); 
+  } 
+
+  40% { 
+      transform: translateX(-2px) rotate(-2deg); 
+  } 
+
+  60% { 
+      transform: translateX(4px) rotate(4deg); 
+  } 
+
+  80% { 
+      transform: translateX(2px) rotate(2deg); 
+  } 
+
+  100% { 
+      transform: translateX(0px) rotate(0deg); 
+  } 
+}
+@media (min-width:1199px){
+  .main-header h1{
+    margin-top: 100px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width:700px){
+  .main-header h1{
+    margin-top: 20px;
+    margin-left:20px;
+    transform: none;
   }
 }
